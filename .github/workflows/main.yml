@@ -30,7 +30,7 @@ jobs:
           pip install pyinstaller
 
       - name: Build win bin
-        run: pyinstaller -F main.py -n  'chaoxing'
+        run: pyinstaller -F main.py -n  'chaoxing' --add-data "resource;resource"
 
       - uses: actions/upload-artifact@v4
         with:
